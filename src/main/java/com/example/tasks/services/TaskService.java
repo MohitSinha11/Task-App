@@ -1,6 +1,7 @@
 package com.example.tasks.services;
 
 import com.example.tasks.domain.entities.Task;
+import com.example.tasks.domain.entities.TaskList;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,4 +11,5 @@ public interface TaskService {
     List<Task> listTasks(UUID taskListId);
     Task createTask(UUID taskListId , Task task);
     Optional<Task> getTask(UUID taskListId , UUID taskId);
+    Task updateTask(UUID taskListId , UUID taskId , Task task);
 }
